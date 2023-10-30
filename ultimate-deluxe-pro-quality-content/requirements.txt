@@ -1,0 +1,4 @@
+psutil~=5.9.6
+python-vlc==3.0.18122
+pywin32==306
+screeninfo~=0.8.1

@@ -1,0 +1,28 @@
+{
+  "media": [
+    {
+      "image": "assets/images/galin_madjuna_adam_za_vsichki_bivshi.png",
+      "video": "assets/videos/galin_madjuna_adam_za_vsichki_bivshi.webm"
+    },
+    {
+      "image": "assets/images/ariana_grande_balkan_remix.png",
+      "video": "assets/videos/ariana_grande_balkan_remix.webm"
+    },
+    {
+      "image": "assets/images/deniz_group_kuchek.png",
+      "video": "assets/videos/deniz_group_kuchek.webm"
+    },
+    {
+      "image": "assets/images/medi_ne_mersi.png",
+      "video": "assets/videos/medi_ne_mersi.webm"
+    },
+    {
+      "image": "assets/images/galin_lidia_nyama_da_mi_mine.png",
+      "video": "assets/videos/galin_lidia_nyama_da_mi_mine.webm"
+    },
+    {
+      "image": "assets/images/krisko_galena_kavala_kuchek.png",
+      "video": "assets/videos/krisko_galena_kavala_kuchek.webm"
+    }
+  ]
+}
