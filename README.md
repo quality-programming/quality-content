@@ -11,11 +11,10 @@ A collection of silly meme applications born mostly from inside jokes of ours.
 > code that changes some system settings like desktop wallpaper or display settings, blocks user control or shuts down
 > the computer, all for joke purposes.
 
-> [!INFO]
-> Don't worry, nothing here contains harmful code; everything is verified and tested by multiple people. Windows
-> SmartScreen and some antivirus software might block the apps, because they're not signed. Most apps don't require
-> internet connection at all, except some which download images or other multimedia. Just turn your volume down when
-> necessary to avoid damaging your hearing and headphones from loud sounds.
+Don't worry, nothing here contains harmful code; everything is verified and tested by multiple people. Windows
+SmartScreen and some antivirus software might block the apps, because they're not signed. Most apps don't require
+internet connection at all, except some which download images or other multimedia. Just turn your volume down when
+necessary to avoid damaging your hearing and headphones from loud sounds.
 
 🔍 Feel free to analyze the code or run it in a virtual machine if you don't trust it. Just note the effects won't be as
 immersive and performance might suffer.
