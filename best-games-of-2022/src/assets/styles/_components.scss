@@ -1,0 +1,37 @@
+button {
+  padding: 0.7rem 1.5rem;
+  color: $fg;
+  background: none;
+  border: $border-width solid $fg;
+  border-radius: $border-radius;
+  font-family: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition:
+    color $transition,
+    background-color $transition,
+    border-color $transition;
+
+  &:hover,
+  &:focus-visible {
+    color: $bg;
+    background-color: $fg;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    color: $fg;
+    background-color: transparent;
+    border-color: $fg;
+    cursor: default;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.transparent {
+  opacity: 0;
+  pointer-events: none;
+}

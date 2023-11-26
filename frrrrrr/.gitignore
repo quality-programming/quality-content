@@ -1,0 +1,15 @@
+# VSCode
+.vscode/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# npm package-lock.json
+package-lock.json
+
+# Build output
+build/
+dist/

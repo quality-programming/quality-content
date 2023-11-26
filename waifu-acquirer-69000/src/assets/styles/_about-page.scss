@@ -1,0 +1,62 @@
+#about-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: $bg;
+
+  .splash {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../img/splash.svg') center / cover;
+    z-index: -1;
+  }
+
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    text-align: center;
+
+    .title {
+      margin-bottom: 0;
+    }
+
+    #version {
+      margin-top: 1rem;
+      color: $fg-dark;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .description {
+      max-width: 600px;
+    }
+
+    .apis-title {
+      font-weight: 400;
+    }
+
+    .apis {
+      list-style: none;
+      text-align: left;
+    }
+  }
+
+  #about-hide {
+    min-width: 8rem;
+    margin: 2rem 0 3rem;
+  }
+}

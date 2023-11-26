@@ -1,0 +1,19 @@
+.toastify {
+  display: flex;
+  align-items: baseline;
+  padding: 0.6rem;
+  color: $bg-dark;
+  background: $accent;
+  border-radius: $border-radius;
+  font-size: 0.9rem;
+  user-select: none;
+  box-shadow: 0 2px 8px 0 rgb(0, 0, 0, 0.2);
+
+  button {
+    display: block;
+    margin-right: 0.6rem;
+    padding: 0;
+    color: $bg-dark;
+    line-height: 0.6;
+  }
+}

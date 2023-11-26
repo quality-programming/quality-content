@@ -1,0 +1,13 @@
+// Base style
+@import 'variables';
+@import 'base';
+
+// Main style
+#app {
+  height: 100%;
+  user-select: none;
+
+  @import 'components';
+  @import 'main-page';
+  @import 'welcome-page';
+}

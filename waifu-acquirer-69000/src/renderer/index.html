@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' blob: data:">
+  <title>Waifu Acquirer 69000</title>
+</head>
+<body>
+  <div id="app">
+    <div id="main-page">
+      <div class="image-area">
+        <div id="placeholder-text">
+          <p>Acquire the waifu.</p>
+          <p>Admire the waifu.</p>
+          <p>Become the waifu.</p>
+        </div>
+        <div id="image-wrapper"></div>
+        <div id="loading-overlay" class="transparent hidden">
+          <svg class="spinner" viewBox="-5 -5 10 10">
+            <circle fill="none" r="4" stroke-width="0.2" stroke-dasharray="30" stroke-dashoffset="8" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <div id="menu">
+        <div class="header-wrapper">
+          <button id="menu-toggle">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M16 18v2H5v-2h11zm5-7v2H3v-2h18zm-2-7v2H8V4h11z"/></svg>
+          </button>
+          <button id="about-show">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg>
+          </button>
+        </div>
+        <div class="settings-wrapper">
+          <div id="neko-entry" class="entry" tabindex="0">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 20.925c-4.962 0-9-3.364-9-7.5A6.54 6.54 0 0 1 4.152 9.76V4.075a1 1 0 0 1 1.5-.866l4.88 2.817a10.8 10.8 0 0 1 2.937 0l4.879-2.817a1 1 0 0 1 1.5.866V9.76A6.542 6.542 0 0 1 21 13.425c0 4.136-4.037 7.5-9 7.5ZM6.152 10.003a.991.991 0 0 1-.194.667A4.614 4.614 0 0 0 5 13.425c0 3.032 3.14 5.5 7 5.5s7-2.468 7-5.5a4.611 4.611 0 0 0-.958-2.755 1 1 0 0 1-.194-.673v-4.19l-3.684 2.127a1.007 1.007 0 0 1-.669.12 8.831 8.831 0 0 0-2.99 0 1.008 1.008 0 0 1-.669-.12L6.152 5.807Z"/></svg>
+            <span class="text">Neko</span>
+            <span class="toggle"></span>
+          </div>
+          <div id="nsfw-entry" class="entry" tabindex="0">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M8.544 15.5h1.458v-7H6.706v1.458h1.838Zm4.958 0h2.625a1.323 1.323 0 0 0 1.167-1.167V9.667a1.116 1.116 0 0 0-.38-.788 1.116 1.116 0 0 0-.787-.379h-2.625a1.116 1.116 0 0 0-.787.38 1.116 1.116 0 0 0-.38.787v4.666a1.323 1.323 0 0 0 1.167 1.167Zm.292-1.108v-1.867h2.041v1.867Zm0-2.917V9.608h2.041v1.867Z"/><path d="M20 21H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1ZM5 19h14V5H5Z"/></svg>
+            <span class="text">NSFW</span>
+            <span class="toggle"></span>
+          </div>
+        </div>
+        <div class="controls-wrapper">
+          <button id="generate-image" class="accent">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4.828 21l-.02.02-.021-.02H2.992A.993.993 0 0 1 2 20.007V3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H4.828zM20 15V5H4v14L14 9l6 6zm0 2.828l-6-6L6.828 19H20v-1.172zM8 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+            <span class="separator"></span>
+            <span class="text">Acquire a Waifu</span>
+          </button>
+          <button id="image-source" disabled>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v8h-2V6.413l-7.793 7.794-1.414-1.414L17.585 5H13V3h8z"/></svg>
+            <span class="separator"></span>
+            <span class="text">Image Source</span>
+          </button>
+          <button id="save-image" disabled>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M13 10h5l-6 6-6-6h5V3h2v7zm-9 9h16v-7h2v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-8h2v7z"/></svg>
+            <span class="separator"></span>
+            <span class="text">Save Image</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="about-page" class="transparent hidden">
+      <div class="about-wrapper">
+        <div class="splash"></div>
+        <h1 class="title">Waifu Acquirer <span class="accent">69000</span></h1>
+        <p id="version"></p>
+        <p class="description">
+          This software is indented for educational and entertainment purposes.
+          The displayed images belong to their respective copyright holders.
+        </p>
+        <h2 class="apis-title">Web APIs used:</h2>
+        <ul class="apis">
+          <li>waifu.im - <a href="https://www.waifu.im">https://www.waifu.im</a></li>
+          <li>waifu.pics - <a href="https://waifu.pics">https://waifu.pics</a></li>
+        </ul>
+      </div>
+      <button id="about-hide">Back</button>
+    </div>
+    <div id="welcome-page">
+      <div id="welcome-page-splash" class="splash"></div>
+      <div class="title-wrapper">
+        <h1 class="title upper">Welcome to</h1>
+        <h1 class="title lower">Waifu Acquirer <span class="accent">69000</span></h1>
+      </div>
+      <div class="warning-wrapper">
+        <p class="warning accent">This app contains NSFW content. Proceed at your own discretion.</p>
+        <div class="button-wrapper">
+          <button id="continue">Continue</button>
+          <button id="quit" class="accent">Quit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

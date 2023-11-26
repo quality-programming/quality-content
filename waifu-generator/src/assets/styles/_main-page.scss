@@ -1,0 +1,227 @@
+#main-page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+  border-radius: 1rem;
+  user-select: none;
+
+  #image-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+    padding: 1rem;
+    text-align: center;
+
+    svg {
+      display: block;
+      width: 25%;
+
+      path {
+        fill: $fg-alt;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      color: $fg-alt;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+
+  #image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    // pointer-events: all !important;
+    // transition: opacity $transition-params-long;
+
+    img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+      pointer-events: none;
+      // transition:
+      //   opacity $transition-params-long,
+      //   transform $transition-params-long;
+    }
+  }
+
+  #loading-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $overlay;
+    border-radius: 1rem;
+    // transition: opacity $transition-params-long;
+
+    .spinner,
+    .spinner:after {
+      display: block;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .spinner {
+      border: 6px solid hsla(220, 15%, 70%, 1);
+      border-left-color: hsla(220, 15%, 70%, 0.1);
+      animation: spinner 1s infinite linear;
+    }
+  }
+
+  .controls-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    user-select: initial;
+    pointer-events: none;
+  }
+
+  #controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: auto;
+    transform: translateY(124px);
+    transition: transform $transition;
+
+    &.expanded {
+      transform: translateY(0);
+
+      #controls-expander {
+        background-color: $overlay;
+
+        .arrow {
+          transform: scaleY(-1);
+        }
+      }
+    }
+  }
+
+  #controls-expander {
+    cursor: pointer;
+    position: relative;
+    padding: 8px 0;
+    background-color: transparent;
+    transition: background-color $transition;
+
+    .arrow {
+      display: block;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin: 0 auto;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 7px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+        border: solid $fg;
+        border-width: $border-width $border-width 0 0;
+        transform: rotate(-45deg);
+        transition: border-color $transition;
+      }
+    }
+
+    &:hover {
+      background-color: $overlay;
+    }
+  }
+
+  .control-widgets {
+    display: grid;
+    grid-auto-columns: auto auto auto 1fr;
+    grid-template-areas:
+      'sd-icon sd-label sd sd'
+      'ct-icon ct-label ct ct-value'
+      'sv-icon sv       sv sv';
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+    background-color: $overlay;
+    align-items: center;
+    transition: height $transition;
+
+    .icon {
+      width: 20px;
+    }
+
+    .seed-icon {
+      grid-area: sd-icon;
+    }
+
+    .seed-label {
+      grid-area: sd-label;
+    }
+
+    #seed {
+      grid-area: sd;
+    }
+
+    .creativity-icon {
+      grid-area: ct-icon;
+    }
+
+    .creativity-label {
+      grid-area: ct-label;
+    }
+
+    #creativity {
+      grid-area: ct;
+    }
+
+    #creativity-value {
+      grid-area: ct-value;
+    }
+
+    .save-icon {
+      grid-area: sv-icon;
+    }
+
+    #save {
+      grid-area: sv;
+      width: max-content;
+      padding: 0.2rem 0.6rem;
+    }
+  }
+
+  #border-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: $border-width dashed $fg-alt;
+    border-radius: 1rem;
+    pointer-events: none;
+    // transition: opacity $transition-params-long;
+  }
+}

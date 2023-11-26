@@ -1,0 +1,215 @@
+button {
+  padding: 0.7rem 1.5rem;
+  color: $fg;
+  background: none;
+  border: $border-width solid $fg;
+  border-radius: $border-radius;
+  font-family: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition:
+    color $transition,
+    background-color $transition,
+    border-color $transition;
+
+  &:hover,
+  &:focus-visible {
+    color: $bg-dark;
+    background-color: $fg;
+
+    .icon path {
+      fill: $bg-dark;
+    }
+
+    .separator {
+      background-color: $bg-dark;
+    }
+  }
+
+  &.accent:hover,
+  &.accent:focus-visible {
+    color: $bg-dark;
+    background-color: $accent;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    color: $fg-dark;
+    background-color: transparent;
+    border-color: $fg-dark;
+    cursor: default;
+
+    .icon path {
+      fill: $fg-dark;
+    }
+
+    .separator {
+      background-color: $fg-dark;
+    }
+  }
+
+  &.accent:disabled,
+  &.accent:disabled:hover {
+    color: $fg-dark;
+    border-color: $accent-dark;
+  }
+
+  &.accent {
+    color: $fg;
+    border-color: $accent;
+  }
+
+  & .icon path {
+    fill: $fg;
+    transition: fill $transition;
+  }
+
+  & .separator {
+    background-color: $fg;
+    transition: background-color $transition;
+  }
+}
+
+.entry {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 48px;
+  padding: 10px;
+  background-color: $bg;
+  border: 2px solid $bg;
+  border-radius: $border-radius;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:focus-visible {
+    border-color: $fg-dark;
+  }
+
+  &.checked {
+    .icon path {
+      fill: $accent;
+    }
+
+    .toggle::after {
+      background-color: $accent;
+      transform: translateX(100%);
+    }
+  }
+
+  .icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+
+    path {
+      fill: $fg;
+      transition: fill $transition;
+    }
+  }
+
+  .text {
+    flex-shrink: 0;
+    white-space: nowrap;
+    transition: opacity $transition;
+  }
+
+  .toggle {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    cursor: pointer;
+    transition: opacity $transition;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 12px;
+      margin: 4px;
+      background-color: $fg-dark;
+      border-radius: 1000000px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 100%;
+      aspect-ratio: 1;
+      background-color: $fg-mid;
+      border-radius: 1000000px;
+      visibility: visible;
+      transition:
+        background-color $transition,
+        transform $transition;
+    }
+  }
+}
+
+.icon {
+  display: block;
+  width: 100%;
+
+  path {
+    fill: $fg;
+  }
+}
+
+.spinner {
+  animation: spinner 1.4s linear infinite;
+
+  @keyframes spinner {
+    100% {
+      transform: rotate(270deg)
+    }
+  }
+
+  circle {
+    stroke: $accent;
+    animation: spinner-circle 1.4s ease-in-out infinite;
+  }
+
+  @keyframes spinner-circle {
+    0% {
+      stroke-dashoffset: 28;
+    }
+    50% {
+      transform: rotate(135deg);
+      stroke-dashoffset: 8;
+    }
+    100% {
+      transform: rotate(450deg);
+      stroke-dashoffset: 28;
+    }
+  }
+}
+
+a[href] {
+  color: $accent;
+  text-decoration: none;
+}
+
+a[href]:hover,
+a[href]:focus-visible {
+  text-decoration: underline;
+}
+
+.label {
+  margin: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.transparent {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.accent {
+  color: $accent;
+}

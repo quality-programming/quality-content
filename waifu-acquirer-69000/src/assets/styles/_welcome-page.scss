@@ -1,0 +1,63 @@
+#welcome-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 1000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: $bg;
+  text-align: center;
+  overflow: hidden;
+
+  .splash {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../img/splash.svg') center / cover;
+  }
+
+  .title-wrapper {
+    margin: auto 0;
+  }
+
+  .title {
+    margin: 0;
+    font-weight: 700;
+
+    &.upper {
+      font-size: 1.8rem;
+    }
+
+    &.lower {
+      margin-top: 1.5rem;
+      font-size: 3rem;
+    }
+  }
+
+  .warning-wrapper {
+    margin-bottom: 3rem;
+  }
+
+  .warning {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  button {
+    min-width: 8rem;
+  }
+}

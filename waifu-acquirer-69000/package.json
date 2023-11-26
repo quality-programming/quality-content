@@ -1,0 +1,61 @@
+{
+  "name": "waifu-acquirer-69000",
+  "version": "1.0.1",
+  "main": "build/main.js",
+  "scripts": {
+    "clean": "concurrently \"npm run clean:build\" \"npm run clean:dist\"",
+    "clean:build": "rimraf build/",
+    "clean:dist": "rimraf dist/",
+    "start:dev": "npm run clean:build && concurrently -k \"npm run dev:renderer\" \"npm run dev:main\"",
+    "start:prod": "npm run build && electron .",
+    "build": "npm run clean:build && cross-env NODE_ENV=production concurrently \"npm run build:main\" \"npm run build:renderer\"",
+    "build:main": "webpack --config webpack.main.config.js",
+    "build:renderer": "webpack --config webpack.renderer.config.js",
+    "dist:windows": "npm run clean:dist && electron-builder build --windows",
+    "dist:linux": "npm run clean:dist && electron-builder build --linux",
+    "dist:macos": "npm run clean:dist && electron-builder build --macos",
+    "dev:main": "webpack --config webpack.main.config.js && electron --remote-debugging-port=9223 .",
+    "dev:renderer": "webpack serve --config webpack.renderer.config.js"
+  },
+  "dependencies": {
+    "filenamify": "^6.0.0",
+    "got": "^13.0.0",
+    "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "electron": "26.6.1",
+    "electron-builder": "^24.9.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.10.0"
+  },
+  "build": {
+    "productName": "Waifu Acquirer 69000",
+    "asar": true,
+    "compression": "maximum",
+    "files": [
+      "!**/*",
+      "build",
+      "!**/*.map"
+    ],
+    "electronLanguages": "en-US",
+    "win": {
+      "target": "dir",
+      "icon": "icon.ico"
+    },
+    "linux": {
+      "target": "dir"
+    }
+  }
+}

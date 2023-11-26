@@ -1,0 +1,148 @@
+button {
+  min-width: 4rem;
+  padding: 0.2rem 0.6rem;
+  color: $fg;
+  background: none;
+  border: $border-width solid $bg-alt;
+  border-radius: $border-radius;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    color $transition,
+    background-color $transition,
+    border-color $transition;
+
+  &:hover {
+    background-color: $bg-alt;
+  }
+
+  &:active {
+    background-color: $bg-alt-dark;
+    border-color: $bg-alt-dark;
+    transition-duration: 0ms;
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:active {
+    color: $bg-alt-dark;
+    background-color: transparent;
+    border-color: $bg-alt-dark;
+    cursor: default;
+  }
+
+  &.large {
+    padding: 0.4rem 1rem;
+  }
+
+  &.red {
+    color: $fg;
+    border-color: $red;
+  }
+
+  &.red:hover {
+    color: $fg-inverted;
+    background-color: $red;
+  }
+
+  &.red:active {
+    color: $fg-inverted;
+    background-color: $red-dark;
+    border-color: $red-dark;
+  }
+
+  &.blue {
+    color: $fg;
+    border-color: $blue;
+  }
+
+  &.blue:hover {
+    color: $fg-inverted;
+    background-color: $blue;
+  }
+
+  &.blue:active {
+    color: $fg-inverted;
+    background-color: $blue-dark;
+    border-color: $blue-dark;
+  }
+}
+
+input[type=number] {
+  width: fit-content;
+  margin: 0;
+  padding: 0.1rem 0.4rem;
+  color: $fg;
+  background: none;
+  border: $border-width solid $bg-alt;
+  border-width: 0 0 $border-width 0;
+  font-family: inherit;
+  font-size: 1rem;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
+}
+
+input[type=range] {
+  appearance: none;
+  position: relative;
+  width: fit-content;
+  height: 1rem;
+  padding: 0.5rem 0;
+  background: none;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    margin-top: calc(-0.5rem + 1px);
+    background-color: $fg;
+    border-radius: 1000000px;
+  }
+
+  &::-webkit-slider-runnable-track {
+    appearance: none;
+    width: 100%;
+    height: $border-width;
+    background-color: $bg-alt;
+  }
+}
+
+svg.icon {
+  display: block;
+  width: 100%;
+
+  path {
+    fill: $fg;
+  }
+}
+
+.label {
+  margin: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.transparent {
+  opacity: 0;
+  pointer-events: none;
+
+  & *,
+  & *::after,
+  & *::before {
+    pointer-events: none;
+  }
+}
+
+.red {
+  color: $red;
+}
+
+.blue {
+  color: $blue;
+}

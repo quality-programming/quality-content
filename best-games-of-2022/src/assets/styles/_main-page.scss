@@ -1,0 +1,88 @@
+#main-page {
+  height: 100%;
+  overflow: hidden;
+
+  #image-wrapper {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .info-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    #info-overlay {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: fit-content;
+      height: 70px;
+      margin-top: 16px;
+      padding: 0 24px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 0 1000000px 1000000px 0;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+
+      .icon {
+        display: block;
+        width: auto;
+        height: 2rem;
+
+        path {
+          fill: $fg;
+        }
+      }
+
+      #award-name {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 200;
+      }
+    }
+  }
+
+  #next {
+    display: block;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 1000000px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    transform: translateX(-50%);
+
+    &:hover::before {
+      top: 20px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 16px;
+      left: 21px;
+      width: 18px;
+      height: 18px;
+      border: solid #fff;
+      border-width: $border-width $border-width 0 0;
+      transform: rotate(135deg);
+      transition: top $transition;
+    }
+  }
+}

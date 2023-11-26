@@ -1,0 +1,50 @@
+#welcome-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 3rem;
+  background-color: $bg;
+  text-align: center;
+
+  .title-wrapper {
+    margin: auto 0;
+    text-align: center;
+
+    .title {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 00;
+
+      span {
+        animation: dynamic-fg 10s infinite linear;
+      }
+    }
+
+    .description {
+      margin: 2rem 0 0 0;
+      color: $fg-alt;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  .warning-wrapper {
+    .warning {
+      margin: 0;
+      color: $red;
+      font-size: 0.85rem;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0 0 0;
+    }
+  }
+}
