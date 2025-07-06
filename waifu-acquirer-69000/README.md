@@ -29,8 +29,6 @@ Requirements:
 
 Newer versions of the dependencies might work, but are not tested.
 
-Electron has been updated to v26. At the moment, v27 has issues with window title bars.
-
 1. Clone the repository and enter the project directory
 
     ```sh

@@ -13,5 +13,9 @@ module.exports = merge(baseConfig, {
         path: path.join(__dirname, 'build'),
         filename: '[name].js'
     },
-    target: 'electron-main'
+    target: 'electron-main',
+    externals: {
+        wallpaper: 'wallpaper'
+    },
+    externalsType: 'commonjs'
 });

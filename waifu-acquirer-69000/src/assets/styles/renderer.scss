@@ -1,17 +1,11 @@
-// Base style
-@import 'variables';
-@import 'base';
+@use 'base';
+@use 'components';
+@use 'main-page';
+@use 'about-page';
+@use 'welcome-page';
+@use 'toastify';
 
-// Main style
 #app {
   height: 100%;
   user-select: none;
-
-  @import 'components';
-  @import 'main-page';
-  @import 'about-page';
-  @import 'welcome-page';
 }
-
-// Overrides
-@import 'toastify';

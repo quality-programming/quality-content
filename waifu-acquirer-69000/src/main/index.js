@@ -52,6 +52,8 @@ function createWindow() {
 
     if (process.platform === 'linux') {
         const icon = nativeImage.createFromPath(path.join(__dirname, AppIcon));
+        // Currently doesn't work on Ubuntu 24 / Gnome 46
+        // https://github.com/electron/electron/issues/45335
         mainWindow.setIcon(icon);
     }
 

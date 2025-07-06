@@ -1,4 +1,3 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const DEV = process.env.NODE_ENV !== 'production';
@@ -37,13 +36,5 @@ module.exports = {
                 type: 'asset/resource'
             }
         ]
-    },
-    plugins: [
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: 'node_modules/wallpaper/source/macos-wallpaper' },
-                { from: 'node_modules/wallpaper/source/windows-wallpaper-x86-64.exe' }
-            ]
-        })
-    ]
+    }
 }

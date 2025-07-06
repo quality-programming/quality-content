@@ -33,6 +33,8 @@ function createMainWindow() {
 
     if (process.platform === 'linux') {
         const icon = nativeImage.createFromPath(path.join(__dirname, AppIcon));
+        // Currently doesn't work on Ubuntu 24 / Gnome 46
+        // https://github.com/electron/electron/issues/45335
         window.setIcon(icon);
     }
 
@@ -92,6 +94,7 @@ function createPlayerWindow(x, y, width, height, parent) {
         movable: false,
         closable: false,
         frame: false,
+        roundedCorners: false,
         skipTaskbar: true,
         transparent: true,
         show: false,
@@ -123,6 +126,14 @@ function createPlayerWindow(x, y, width, height, parent) {
         window.focus();
         window.setResizable(false);
     });
+
+    if (process.platform === 'win32') {
+        window.on('blur', () => {
+            // Temporary hack due to yet another Electron title bar bug on Windows
+            // https://github.com/electron/electron/issues/46882
+            players.forEach((player) => player.window.setMaximizable(false));
+        });
+    }
 
     if (!DEV) {
         window.on('close', (event) => event.preventDefault());

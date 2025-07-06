@@ -1,15 +1,9 @@
-// Base style
-@import 'variables';
-@import 'base';
+@use 'base';
+@use 'components';
+@use 'main-page';
+@use 'welcome-page';
+@use 'toastify';
 
-// Main style
 #app {
   user-select: none;
-
-  @import 'components';
-  @import 'main-page';
-  @import 'welcome-page';
 }
-
-// Overrides
-@import 'toastify';
