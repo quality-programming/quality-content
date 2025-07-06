@@ -68,17 +68,17 @@ Unfortunately, the source code for few of the projects has been lost long ago. W
 [udpqc-source]: https://github.com/quality-programming/quality-content/blob/master/ultimate-deluxe-pro-quality-content
 [udpqc-release]: https://github.com/quality-programming/quality-content/releases/download/downloads/Ultimate_Deluxe_Pro_Quality_Content_v1.3.7z
 [waifu-generator-source]: https://github.com/quality-programming/quality-content/blob/master/waifu-generator
-[waifu-generator-release-w]: https://github.com/quality-programming/quality-content/releases/download/downloads/Waifu_Generator_v1.0.2_win.7z
-[waifu-generator-release-l]: https://github.com/quality-programming/quality-content/releases/download/downloads/Waifu_Generator_v1.0.2_linux.7z
+[waifu-generator-release-w]: https://github.com/quality-programming/quality-content/releases/download/downloads/Waifu_Generator_v1.0.3_win.7z
+[waifu-generator-release-l]: https://github.com/quality-programming/quality-content/releases/download/downloads/Waifu_Generator_v1.0.3_linux.7z
 [waifu-acquirer-69000-source]: https://github.com/quality-programming/quality-content/blob/master/waifu-acquirer-69000
-[waifu-acquirer-69000-release-w]: https://github.com/quality-programming/quality-content/releases/download/downloads/Waifu_Acquirer_69000_v1.0.1_win.7z
-[waifu-acquirer-69000-release-l]: https://github.com/quality-programming/quality-content/releases/download/downloads/Waifu_Acquirer_69000_v1.0.1_linux.7z
+[waifu-acquirer-69000-release-w]: https://github.com/quality-programming/quality-content/releases/download/downloads/Waifu_Acquirer_69000_v1.0.2_win.7z
+[waifu-acquirer-69000-release-l]: https://github.com/quality-programming/quality-content/releases/download/downloads/Waifu_Acquirer_69000_v1.0.2_linux.7z
 [best-games-of-2022-source]: https://github.com/quality-programming/quality-content/blob/master/best-games-of-2022
-[best-games-of-2022-release-w]: https://github.com/quality-programming/quality-content/releases/download/downloads/Best_Games_of_2022_v1.0.1_win.7z
-[best-games-of-2022-release-l]: https://github.com/quality-programming/quality-content/releases/download/downloads/Best_Games_of_2022_v1.0.1_linux.7z
+[best-games-of-2022-release-w]: https://github.com/quality-programming/quality-content/releases/download/downloads/Best_Games_of_2022_v1.0.2_win.7z
+[best-games-of-2022-release-l]: https://github.com/quality-programming/quality-content/releases/download/downloads/Best_Games_of_2022_v1.0.2_linux.7z
 [frrrrrr-source]: https://github.com/quality-programming/quality-content/blob/master/frrrrrr
-[frrrrrr-release-w]: https://github.com/quality-programming/quality-content/releases/download/downloads/Frrrrrr_v1.0.1_win.7z
-[frrrrrr-release-l]: https://github.com/quality-programming/quality-content/releases/download/downloads/Frrrrrr_v1.0.1_linux.7z
+[frrrrrr-release-w]: https://github.com/quality-programming/quality-content/releases/download/downloads/Frrrrrr_v1.0.2_win.7z
+[frrrrrr-release-l]: https://github.com/quality-programming/quality-content/releases/download/downloads/Frrrrrr_v1.0.2_linux.7z
 
 [alexitx]: https://github.com/alexitx
 [stekatag]: https://github.com/stekatag

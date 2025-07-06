@@ -1,6 +1,6 @@
 {
   "name": "frrrrrr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "build/main.js",
   "scripts": {
     "clean": "concurrently \"npm run clean:build\" \"npm run clean:dist\"",
